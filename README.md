@@ -33,3 +33,8 @@ const space = [0, 4, 8, 16, 32, 64, 128, 256, 512];
 
 The `ThemeDecorator` is applied as a wrapper in the `AppProvider` component at `[src/]components/AppProvider.tsx`.
 
+The `Box` component is included and useful to extend for custom styled components.
+
+## Misc
+
+The `baseUrl` property in the `tsconfig.json` is set to `src`.
