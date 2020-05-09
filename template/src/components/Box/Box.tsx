@@ -1,4 +1,4 @@
-import styled, { StyledComponentProps } from 'styled-components/macro';
+import styled from 'styled-components/macro';
 import {
   space,
   SpaceProps,
@@ -16,18 +16,13 @@ import {
   FlexboxProps,
 } from 'styled-system';
 
-export type BoxProps = StyledComponentProps<
-  'div',
-  any,
-  SpaceProps &
-    LayoutProps &
-    ColorProps &
-    TypographyProps &
-    BorderProps &
-    ShadowProps &
-    FlexboxProps,
-  never
->;
+export type BoxProps = SpaceProps &
+  LayoutProps &
+  ColorProps &
+  TypographyProps &
+  BorderProps &
+  ShadowProps &
+  FlexboxProps;
 const Box = styled.div<BoxProps>`
   ${space}
   ${layout}
