@@ -18,17 +18,27 @@ Add the following property to the VSCode Settings (JSON) to enable prettier and 
 
 ## Styling
 
-Customize `[src/]utils/theme.ts` as described at the [styled-systems docs](https://styled-system.com/theme-specification).
+Customize `[src/]utils/theme/default` (or more themes) as described at the [styled-systems docs](https://styled-system.com/theme-specification).
 The following creates a box with a padding of `16px` based on the theme value.
 
 ```tsx
 const PaddedBox: React.FC = ({ children }) => {
-  return <Box p={3}>{children}</Box>;
+  return <Box p="M">{children}</Box>;
 };
 
-// [src/]utils/theme.ts
+// [src/]utils/theme/default/space.ts
+const space = {
+  NONE: 0,
+  XXS: 4,
+  XS: 8,
+  S: 12,
+  M: 16,
+  L: 24,
+  XL: 32,
+  XXL: 48,
+  H: 64,
+} as const;
 // ...
-const space = [0, 4, 8, 16, 32, 64, 128, 256, 512];
 ```
 
 The `ThemeDecorator` is applied as a wrapper in the `AppProvider` component at `[src/]components/AppProvider.tsx`.
