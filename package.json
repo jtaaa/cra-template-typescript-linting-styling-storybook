@@ -1,6 +1,6 @@
 {
   "name": "cra-template-typescript-linting-styling-storybook",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "description": "A template with typescript, linting, styling and storybook.",
   "author": "Joshua Allum <joshuatallum@gmail.com>",
   "license": "MIT",
